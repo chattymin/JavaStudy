@@ -15,7 +15,6 @@ public class PDM1316 {
             String string = scanner.next();
             for(int j = 0; j < string.length(); j++ ){
                 if(result[(int)string.charAt(j) - 96] != 0 && !(string.charAt(j) == now)) {
-                    result[(int)string.charAt(j) - 96] = 100;
                     count++;
                     break;
                 }else if(result[(int)string.charAt(j) - 96] == 0 && !(string.charAt(j) == now)) {

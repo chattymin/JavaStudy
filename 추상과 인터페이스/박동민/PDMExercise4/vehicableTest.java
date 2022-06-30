@@ -9,8 +9,8 @@ public class vehicableTest {
         taxi.setSpeed(-50);
         taxi.setSpeed(181);
         taxi.setSpeed(80);
-        driver.drive(bus);
-        driver.stop(bus);
+        driver.drive(taxi);
+        driver.stop(taxi);
         System.out.println();
         // Bus info
         bus.setSpeed(-50);
