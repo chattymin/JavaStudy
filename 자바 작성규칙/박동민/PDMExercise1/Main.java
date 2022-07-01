@@ -10,8 +10,7 @@ public class Main {
     void run(){
         while(true){ // read
             Item it = new Item();
-            int err = it.read(scanner);
-            if(err == -1){
+            if(it.read(scanner) == -1){
                 break;
             }
             items.add(it);
