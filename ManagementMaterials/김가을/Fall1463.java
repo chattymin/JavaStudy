@@ -7,7 +7,7 @@ public class Fall1463
 {
 	static int recur(int num, int count)
 	{
-		/*while(num != 1)
+		/*if(num != 1)
 		{
 			if(num%3==0)
 			{
