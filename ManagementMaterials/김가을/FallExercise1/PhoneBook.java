@@ -11,21 +11,21 @@ public class PhoneBook {
 	{
 		int num;
 		while (true) {
-			System.out.println("############ ¿¬¶ôÃ³ °ü¸® ############");
-			System.out.print("(1) ¿¬¶ôÃ³ Ãâ·Â  ");
-			System.out.print("(2) »õ·Î µî·Ï  ");
-			System.out.print("(3) »èÁ¦  ");
-			System.out.print("(4) °Ë»ö  ");
-			System.out.print("(5) ¼öÁ¤  ");
-			System.out.print("(6) ³¡³»±â  ");
+			System.out.println("############ ì—°ë½ì²˜ ê´€ë¦¬ ############");
+			System.out.print("(1) ì—°ë½ì²˜ ì¶œë ¥  ");
+			System.out.print("(2) ìƒˆë¡œ ë“±ë¡  ");
+			System.out.print("(3) ì‚­ì œ  ");
+			System.out.print("(4) ê²€ìƒ‰  ");
+			System.out.print("(5) ìˆ˜ì •  ");
+			System.out.print("(6) ëë‚´ê¸°  ");
 			System.out.print("... ");
 			num = manager.scan.nextInt();
 			if (num >= 1 && num <= 6)
 				return num;
-			System.out.println("Àß¸øµÈ ¹øÈ£ÀÔ´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØ ÁÖ¼¼¿ä...");
+			System.out.println("ì˜ëª»ëœ ë²ˆí˜¸ì…ë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ ì£¼ì„¸ìš”...");
 		}
 	}
-	// inputMenu¸¦ ÀÌ¿ëÇÏ¿© ¸Ş´º¸¦ ÀÔ·Â¹Ş°í ½ÇÇàÇÏµµ·Ï ÀÛ¼ºÇÏ½Ã¿À.
+	// inputMenuë¥¼ ì´ìš©í•˜ì—¬ ë©”ë‰´ë¥¼ ì…ë ¥ë°›ê³  ì‹¤í–‰í•˜ë„ë¡ ì‘ì„±í•˜ì‹œì˜¤.
 	void runMenu() 
 	{
 		while(true)
@@ -49,7 +49,7 @@ public class PhoneBook {
 				manager.modifyContact();
 				break;
 			case 6:
-				break;
+				return;
 			}
 		}
 		
