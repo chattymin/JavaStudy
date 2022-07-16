@@ -66,14 +66,14 @@ public class BookStore
 			}
 			for(Manageable list : sellList)
 			{
-				if(kwd.equals("ÀÏ¹İÃ¥"))
+				if(kwd.equals("ì¼ë°˜ì±…"))
 				{
 					if(list instanceof Book && !(list instanceof AppendixBook) && !(list instanceof EBook))
 					{
 						list.print();
 					}
 				}
-				if(kwd.equals("ºÎ·ÏÃ¥"))
+				if(kwd.equals("ë¶€ë¡ì±…"))
 				{
 					if(list instanceof AppendixBook)
 					{
@@ -81,7 +81,7 @@ public class BookStore
 					}
 					
 				}
-				if(kwd.equals("ÀüÀÚÃ¥"))
+				if(kwd.equals("ì „ìì±…"))
 				{
 					if(list instanceof EBook)
 					{
@@ -90,7 +90,7 @@ public class BookStore
 				}
 				if(list.matches(kwd))
 				{
-                    list.print();
+                   			list.print();
 				}
 			}
 		}
@@ -103,7 +103,7 @@ public class BookStore
 			filein = new Scanner(new File(filename));
 		} 
 		catch (Exception e) {
-			System.out.printf("ÆÄÀÏ ¿ÀÇÂ ½ÇÆĞ: %s\n", filename);
+			System.out.printf("íŒŒì¼ ì˜¤í”ˆ ì‹¤íŒ¨: %s\n", filename);
 			System.exit(0);
 		}
 		return filein;
