@@ -54,6 +54,6 @@ public class KHY11724 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		KHY11724 my=new KHY11724();
-        my.run();
+                my.run();
 	}
 }
