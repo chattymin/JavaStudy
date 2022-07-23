@@ -8,9 +8,9 @@ class DFS
 	
 	ArrayList<Integer> adjList[];
 	boolean visited[];
-	int N; //Á¤Á¡ÀÇ °³¼ö
-	int M; //°£¼±ÀÇ °³¼ö
-	int count=0; //¿¬°á °³¼ö
+	int N; //ì •ì ì˜ ê°œìˆ˜
+	int M; //ê°„ì„ ì˜ ê°œìˆ˜
+	int count=0; //ì—°ê²° ê°œìˆ˜
 	
 	public void run()
 	{
@@ -48,10 +48,6 @@ class DFS
 	}
 	public void dfs(int V)
 	{
-		if(visited[V])
-		{
-			return;
-		}
 		visited[V] = true;
 		for(int list : adjList[V])
 		{
