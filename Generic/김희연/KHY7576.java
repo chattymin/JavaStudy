@@ -3,23 +3,22 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.ArrayList;
 
-class Node2
+class Node
 {
 	int i;
 	int j;
 	
-	Node2(int i,int j)
+	Node(int i,int j)
 	{
 		this.i=i;
 		this.j=j;
 	}
-	
 }
 
-public class KHY7576 {
+public class Main {
 	Scanner input=new Scanner(System.in);
-	LinkedList<Node2>queue=new LinkedList<>();
-	ArrayList<Node2>nodecheck=new ArrayList<>();
+	LinkedList<Node>queue=new LinkedList<>();
+	ArrayList<Node>nodecheck=new ArrayList<>();
     int []n= {-1,1,0,0};
     int []m= {0,0,-1,1};
     
@@ -42,11 +41,13 @@ public class KHY7576 {
 				tomato[i][j]=input.nextInt();
 				if(tomato[i][j]==1)
 				{
-					nodecheck.add(new Node2(i,j));
+					nodecheck.add(new Node(i,j));
 				}
 			}
-		}	
-		if((Arrays.asList(tomato).contains(1) || Arrays.asList(tomato).contains(-1)) && Arrays.asList(tomato).contains(0)==false)
+		}
+		String str=Arrays.deepToString(tomato);
+		
+		if((str.contains("1") || str.contains("-1")) && str.contains("0")==false)
 		{
 			System.out.println(0);
 			System.exit(0);
@@ -54,7 +55,8 @@ public class KHY7576 {
 		
 		day=BFS(tomato);
 		
-		if(Arrays.asList(tomato).contains(0)==true)
+		str=Arrays.deepToString(tomato);
+		if(str.contains("0"))
 		{
 			System.out.println(-1);
 			return;
@@ -64,19 +66,19 @@ public class KHY7576 {
 		
 	int BFS(int[][]tomato)
 	{
-		for(Node2 node:nodecheck)
+		for(Node node:nodecheck)
 		{
 			queue.add(node);
 		}
 		
 		while(queue.isEmpty()!=true)
-    	{
+		{
 			int node_size=queue.size();
 			while(node_size!=0)
 			{
-				Node2 node=queue.poll();
+				
+				Node node=queue.poll();
 				node_size--;
-
 				for(int i=0;i<4;i++)
 				{
 					int row=node.i+n[i];
@@ -84,8 +86,7 @@ public class KHY7576 {
 				
 					if(row<M && row>=0 && col<N && col>=0 && tomato[row][col]==0)
 					{
-						queue.add(new Node2(row,col));
-						
+						queue.add(new Node(row,col));
 						tomato[row][col]=1;	
 					}	
 				}
@@ -97,7 +98,7 @@ public class KHY7576 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		KHY7576 my=new KHY7576();
+		Main my=new Main();
 		my.run();
 	}
 }
