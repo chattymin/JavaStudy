@@ -15,14 +15,16 @@ public class KHY15649 {
 		}while((M<1)||(M>N)||(N>8));
 		
 		number=new int[N+1];
+		answer=new int[M];
+		visited=new boolean[N+1];
+		
 		for(int i=1;i<=N;i++)
 		{
 			number[i]=i;
 		}
-
-		answer=new int[M];
-		visited=new boolean[N+1];
+		
 		visited[0]=true;
+		
 		dfs(0,1);
 	}
 	
@@ -53,6 +55,5 @@ public class KHY15649 {
 	public static void main(String[] args) {
 		KHY15649 my=new KHY15649();
 		my.run();
-
 	}
 }
