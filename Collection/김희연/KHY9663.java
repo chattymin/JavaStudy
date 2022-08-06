@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class KHY9663 {
     int N;
     int arr[];
-    int count=0,result=0;
+    int count=0;
     
     void run()
     {
